@@ -350,14 +350,14 @@ form { position: relative; }
 /* bios */
 .bio { max-width: 860px; margin: 0 auto; padding: 32px 20px 0; }
 .bio-partner { display: grid; gap: 32px; align-items: start; }
-.bio-photos { position: relative; width: 100%; max-width: 320px; height: 230px; margin-inline: auto; }
-.bio-photos .office { width: 68%; height: 100%; object-fit: cover; object-position: left; }
-.bio-photos .person { position: absolute; right: 0; bottom: -10px; width: 56%; height: 88%; object-fit: cover; object-position: top; border-radius: 2px; box-shadow: 0 14px 40px rgba(20,40,60,.18); }
+.bio-photos { position: relative; width: 100%; max-width: 340px; margin-inline: auto; }
+.bio-photos .person { display: block; width: 100%; height: auto; border-radius: 14px; box-shadow: 0 14px 40px rgba(20,40,60,.18); }
+.bio-photos.is-small { max-width: 233px; }   /* only a small original exists: show it at its real size so it stays sharp */
 .bio h2 { font-size: 26px; }
 .bio-text { font-size: 13px; line-height: 1.7; }
 .bio-text + .bio-text, .bio h3 + .bio-text { margin-top: 8px; }
 .bio h3 { margin-top: 20px; font-size: 13px; }
-@media (min-width: 640px) { .bio-photos { height: 250px; } .bio h2 { font-size: 30px; } }
+@media (min-width: 640px) { .bio-photos { max-width: 380px; } .bio-photos.is-small { max-width: 233px; } .bio h2 { font-size: 30px; } }
 @media (min-width: 768px) { .bio-partner { grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); } }
 .bio-expert { display: grid; gap: 24px; align-items: start; }
 .bio-expert img.portrait { width: 200px; height: 240px; margin-inline: auto; object-fit: cover; object-position: top; border-radius: 2px; box-shadow: 0 14px 40px rgba(20,40,60,.14); }
